@@ -1,12 +1,11 @@
 import React from 'react';
+import PokeListEntry from './PokeListEntry.jsx';
 
-const PokeList = (props) => (
+const PokeList = ({pokemon}) => (
   <div>
-    <div>
-      <img src="http://vignette4.wikia.nocookie.net/nintendo/images/4/43/Bulbasaur.png/revision/latest?cb=20141002083518&path-prefix=en"/>
-      <h3>Bulbasaur</h3>
-      <p>Grass</p>
-    </div>
+    {pokemon.map((poke, i) => (
+      <PokeListEntry key={i} poke={poke}/>
+    ))}
   </div>
 )
 
